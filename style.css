@@ -34,9 +34,10 @@ body{
     height: 315px; /* think about making these max-width instead - might give you some more responsiveness */
 
     position: absolute; /* positions out of the flow, but according to the nearest parent */
-    top: 0; right: -50%; /* confuse it i guess */ 
+    top: -40%; right: -35%; /* confuse it i guess */ 
     bottom: 0; left: 0;
     margin: auto; /* make em equal */
+    display: flex;
 }
 
 .youtube_trailer:hover {
@@ -109,10 +110,6 @@ a{
     font-size: 70px;
 }
 
-.siteHeader_lable:hover{
-    font-size: 30px;
-}
-
 .siteHeader_lable{
     margin-top: 0%;
     margin-left: 10%;
@@ -120,6 +117,8 @@ a{
     place-items: center;
     align-content: center;
     font-size: 20px;
+    max-width: 40%;
+    color: #ffffff;
 }
 
 .siteShowcase{
@@ -170,4 +169,58 @@ a{
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+@media (min-width: 1920px)
+{
+    #bg{
+        background-position-x: 45%;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1919px) {
+    #bg{
+        background-position-x: 45%;
+        background-repeat: no-repeat;
+        background-size: 1920 auto;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1500px)
+{
+    .siteHeader_image{
+        width: 60%;
+    }
+
+    .siteHeader_image:hover{
+        width: 65%;
+    }
+
+    .siteHeader_lable{
+        font-size: 40px;
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    .siteHeader_image{
+        margin-top: 200px;
+        width: 80%;
+    }
+
+    .siteHeader_image:hover{
+        width: 85%;
+    }
+
+    .siteHeader_lable{
+        font-size: 25px;
+        max-width: 85%;
+    }
+
+
 }
