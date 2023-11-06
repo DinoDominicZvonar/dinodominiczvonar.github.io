@@ -50,6 +50,12 @@ a{
     transition: all 1s;
 }
 
+.projectsbutton{
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
 .homebutton{
     position: fixed;
     margin-top: -24%;
@@ -57,10 +63,11 @@ a{
 }
 
 .links{
-    margin-top: 10%;
-    margin-left: 42.5%;
     place-items: center;
     align-content: center;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .navlink{
@@ -78,6 +85,8 @@ a{
     place-items: center;
     align-content: center;
     font-size: 60px;
+    display: flex;
+    justify-content: left;
 }
 
 .siteHeader_image{
