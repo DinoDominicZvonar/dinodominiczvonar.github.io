@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&display=swap');
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff00; 
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #a3a3a3;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #ffffff;
+}
+
 body{
     background-color: #131316;
     color: #ffffff;
@@ -10,6 +27,21 @@ body{
 
     max-width: 100%;
     overflow-x: hidden;
+}
+
+.youtube_trailer {
+    width: 560px; /* you have to have a size or this method doesn't work */
+    height: 315px; /* think about making these max-width instead - might give you some more responsiveness */
+
+    position: absolute; /* positions out of the flow, but according to the nearest parent */
+    top: 0; right: -50%; /* confuse it i guess */ 
+    bottom: 0; left: 0;
+    margin: auto; /* make em equal */
+}
+
+.youtube_trailer:hover {
+    width: 588px; /* you have to have a size or this method doesn't work */
+    height: 330px; /* think about making these max-width instead - might give you some more responsiveness */
 }
 
 a{
@@ -54,12 +86,13 @@ a{
     margin-bottom: 0%;
     place-items: center;
     align-content: center;
-    width: 300;
+    width: 30%;
     height: auto;
+    transition: all 1s;
 }
 
 .siteHeader_image:hover{
-    width: 400;
+    width: 40%;
     height: auto;
 }
 
