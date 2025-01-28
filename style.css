@@ -82,6 +82,24 @@ a{
     color: #404040;
 }
 
+.bg-video {
+    position: absolute;
+    left: auto;
+    top: 0;
+    background-size: cover;
+    background: no-repeat center;
+    user-select: none;
+    pointer-events: none;
+  
+    filter: brightness(80%);
+  
+    /*additional tweaks for positioning, read more in the link above*/
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+  }
+
 .siteHeader_title{
     margin-top: 25%;
     margin-left: 10%;
