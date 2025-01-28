@@ -64,15 +64,14 @@ a{
 }
 
 .links{
-    margin-top: 25%;
     align-content: center;
     display: flex;
     justify-content: center;
+    transition: 0.2s;
 }
 
 .navlink{
     font-size: 20px;
-    transition: all 0.2s;
 }
 
 .linkhover:hover{
