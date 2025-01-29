@@ -133,6 +133,8 @@ a{
   {
     .bg-video {
         height: 100vh;
+        left: 50%;
+        transform: translate(-50%, 0);
         width: auto;
     }
 
