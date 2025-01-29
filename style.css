@@ -129,7 +129,7 @@ a{
     /*min-height: 56.25vw; /* 100 * 9 / 16 */
   }
 
-  @media (max-width: 1000px)
+  @media (max-width: 1000px) or (orientation: portrait)
   {
     .bg-video {
         height: 100vh;
