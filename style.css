@@ -129,6 +129,14 @@ a{
     /*min-height: 56.25vw; /* 100 * 9 / 16 */
   }
 
+  @media (orientation: portrait)
+  {
+    .bg-video {
+        height: 100vh;
+        width: auto;
+    }
+  }
+
 .siteHeader_title{
     font-size: 70px;
 }
