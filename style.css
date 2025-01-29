@@ -71,13 +71,11 @@ a{
 
 .landingPageHeader
 {
-    position: absolute;
+    position: relative;
     display: inline;
     top: 50%;
     left: 50%;
     right: 0;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     text-align: center;
     place-items: center;
     align-content: center;
@@ -107,15 +105,18 @@ a{
 
 .bg-video {
     position: absolute;
-    left: auto;
-    top: 0;
+    display: inline;
+    top: 50vh;
+    left: 50vw;
+    right: 0;
+    transform: translate(-50vw, -50vh);
     background-size: cover;
     background: no-repeat center;
     user-select: none;
     pointer-events: none;
   
     filter: brightness(60%);
-  
+
     /*additional tweaks for positioning, read more in the link above*/
     height: 100%;
     width: 177.77777778vh; /* 100 * 16 / 9 */
