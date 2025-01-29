@@ -109,6 +109,7 @@ a{
 }
 
 .bg-video {
+    overflow-x: hidden;
     position: absolute;
     display: inline;
     top: 0;
