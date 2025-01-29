@@ -1,0 +1,12 @@
+.landingPageHeader
+{
+    position: static;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+}
