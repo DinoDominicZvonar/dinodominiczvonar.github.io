@@ -75,7 +75,7 @@ a{
 
 .landingPageHeader
 {
-    position: relative;
+    position: static;
     top: 0;
     left: 0;
     height: 100vh;
@@ -209,7 +209,7 @@ a{
     transform: translateX(0);
 }
 
-@media (min-width: 1920px)
+/*@media (min-width: 1920px)
 {
     #bg{
         background-position-x: 45%;
@@ -261,4 +261,4 @@ a{
     }
 
 
-}
+}*/
