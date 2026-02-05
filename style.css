@@ -1,7 +1,6 @@
 
 body {
-    margin: 40px auto; 
-    max-width: clamp(0px, 90vw ,1000px); 
+    margin: 40px auto;
     line-height: 1.6; 
     font-size: clamp(1rem, 1.2rem, 3rem);
     font-family: "Montserrat", sans-serif;
@@ -14,8 +13,14 @@ body {
     height: max-content;
     overflow-x: hidden;
 }
+@media (orientation: landscape)
+{
+    body{
+        max-width: clamp(0px, 90vw ,1000px); 
+    }
+}
 
-@media (width <= 1000px)
+@media (orientation: portrait)
 {
     .stickers
     {
@@ -23,7 +28,8 @@ body {
     }
 
     body{
-        font-size: clamp(1em, calc(1rem + 2vw), 2.5em);
+        font-size: calc(1rem + 2vw);
+        max-width: 90vw; 
     }
 }
 
@@ -64,7 +70,7 @@ h1,h2,h3 {
     flex: auto;
 }
 
-@media (width < 1000px)
+@media (orientation: portrait)
 {
     .contact{
     display: flex;
@@ -73,7 +79,8 @@ h1,h2,h3 {
     text-align: center;
     align-self: flex-start;
     flex: auto;
-}
+    }
+    
 }
 
 .tab{
