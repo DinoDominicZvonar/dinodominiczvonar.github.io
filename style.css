@@ -119,4 +119,6 @@ h1,h2,h3 {
 
 .dinoSticker{
     transform: scale(0.2) rotate(-20deg) translate(-200px, 900px);
+    outline-style: solid;
+    outline: 10px solid #ffffff;
 }
