@@ -1,8 +1,9 @@
+
 body {
     margin: 40px auto; 
     max-width: clamp(0px, 90vw ,1000px); 
     line-height: 1.6; 
-    font-size: clamp(0.5rem, 1.2rem, 3rem); 
+    font-size: clamp(1rem, 1.2rem, 3rem);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -12,6 +13,18 @@ body {
     padding: 0 10px;
     height: max-content;
     overflow-x: hidden;
+}
+
+@media (width <= 1000px)
+{
+    .stickers
+    {
+        display: none;
+    }
+
+    body{
+        font-size: clamp(1em, calc(1rem + 2vw), 2.5em);
+    }
 }
 
 a:link {
@@ -28,21 +41,39 @@ h1,h2,h3 {
 
 .footer {
     text-align: center;
+    align-items: center;
     max-width: clamp(0px, 80vw ,1000px);
 }
 
 .contact{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.tabs{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
     align-self: flex-start;
     flex: auto;
+}
+
+.tabs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    align-self: flex-start;
+    flex: auto;
+}
+
+@media (width < 1000px)
+{
+    .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-self: flex-start;
+    flex: auto;
+}
 }
 
 .tab{
