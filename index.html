@@ -1,37 +1,122 @@
-<!--Why are you inspecting my website?-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino Zvonar</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="landingPage.css">
-    <script defer src="app.js"></script>
-</head>
-<body>
-    <video autoplay muted loop playsInline class="bg-video" >
-        <source src="Videos/DinoZvonarComBackground.webm" type="video/webm">
-    </video>
-
-    <section class="navbar links slide hidden_top">
-        <p1><a class="navlink linkhover" href="Projects/">Projects</a></p1>
-        <a>&nbsp&nbsp&nbsp&nbsp</a>
-        <p1><a class="navlink linkhover" href="#">About</a></p1>
-        <a>&nbsp&nbsp&nbsp&nbsp</a>
-        <p1><a class="navlink linkhover" href="#">Contact</a></p1>
-    </section>
+<html>
+    <head>
+    <script type="text/javascript" src="code.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
     
-    <div class="landingPageHeader">
-        <h1 class="siteHeader_title slide hidden_top">Dino Zvonar</h1>
-        <h1 class="siteHeader_lable slide hidden_left">Core Systems Software Engineer</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+    <meta charset="utf-8">
+    <meta name="Dino Zvonar">
+    <title>Dino Zvonar</title>
+    <style type="text/css">
+    </style>
+    </head>
+
+    <div class="stickers hidden">
+        <img class="sticker dinoSticker" src="Resources/Images/PICT0001.jpg">
     </div>
 
+    <body>
+
+        <header style="text-align: center;">
+            <h1>
+                Dino Zvonar
+            </h1>
+            <h3 class="subtitle">
+                <span id="adjective">Software Engineer</span>
+            </h3>
+
+        <script type="text/javascript">
+        (function () {
+            var words = [
+                "Software Engineer",
+                "Game Developer",
+                "Cobol Developer",
+                "Engine Programmer",
+                "Graphics Programmer",
+                "Gameplay Programmer",
+                "C# Developer",
+                "C++ Developer"
+            ],
+            index = 0;
+
+            const elem = document.getElementById("adjective");
+
+            setInterval(() => {
+                index = (index + 1) % words.length;
+                elem.textContent = words[index];
+            }, 1000);
+        })();
+        </script>
 
 
+        </header>
 
-</body>
+        <div class="tabs">
+        <H3 onclick="AboutClick(this)" class="tab">ABOUT ME</H3>
+        <H3 onclick="GamesClick(this)" class="tab disabled">GAMES</H3>
+        <H3 onclick="BlogClick(this)" class="tab disabled">BLOG</H3>
+        </div>
+
+    <div class="aboutme tabcontent">
+        <p>Hi! I'm Dino, a 22 year old Software Engineer / Game Programmer.
+           I'm currently working at <a href="https://www.handelsbanken.se/">Handelsbanken</a> 
+           as a COBOL Developer as a part of the Cross Border Payments team, I've previously 
+           worked at <a href="https://www.dice.se">DICE</a> where I worked on
+           <a href="https://www.ea.com/games/battlefield/battlefield-6">Battlefield 6</a>
+           first as a Software Engineer Intern on the Core Systems team and then as a 
+           Software Engineer on the KeepGreen team. 
+           <a href="https://www.mobygames.com/person/1897176/dino-zvonar/">proof</a> :)
+        </p>
+
+        <p>My interest in game development started around the age of seven when I realized
+           that the names of the people in the games that I was playing made games for a living.
+           I've studied at The Game Assembly in Malmö where I gained valuable experience in teamwork
+           and game creation. The Game Assembly is also where I built up a strong background in C++,
+           ImGui, Scripting, AI and DirectX11.
+        </p>
+
+        <p>I'm a real horror and scifi nut. My favorite games include Until Dawn, The Last Of Us and Resident Evil 7.
+           When I'm not playing games you might find me taking long walks, playing boardgames with friends or 
+           watching the latest movies at the cinemas.
+        </p>
+    </div>
+    <div class="games tabcontent hidden">
+        <grid>
+            <p>Battlefield 6</p>
+            <p>Heronin</p>
+            <p>Sprite</p>
+        </grid>
+    </div>
+    <div class="blog tabcontent hidden">
+        <p>Under Construction</p>
+    </div>
+    <div class="footer">
+        <H3>CONTACT ME</H3>
+        <div class="contact">
+            <p><a href="mailto:dino.zvonar@hotmail.com">dino.zvonar@hotmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/dinozvonar/">Linkedin</a></p>
+            <p><a href="mailto:dino.zvonar@hotmail.com">CV</a></p>
+            <p><a href="tel:+46704295636">(+46) 70-429-56-36</a></p>
+        </div>
+        <p>© 2026 Dino Dominic Zvonar.</p>
+        <p>All Rights Reserved</p>
+        <p>Note: This website is still under construction</p>
+    </div>
+    </body>
 
 
+    
 </html>

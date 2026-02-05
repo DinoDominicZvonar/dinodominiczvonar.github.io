@@ -1,259 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Special+Elite&display=swap');
-
-@media (prefers-color-scheme: dark)
-{
-:root
-{
-    color-scheme: dark;
-}
-}
-
-
-body{
-    background-color: #131316;
-    color: #ffffff;
-    font-family: 'Lexend Deca';
-    font-weight: 100;
-    padding: 0;
-    margin:  0;
-
-    max-width: 100%;
+body {
+    margin: 40px auto; 
+    max-width: clamp(0px, 90vw ,1000px); 
+    line-height: 1.6; 
+    font-size: clamp(0.5rem, 1.2rem, 3rem); 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #121212;
+    color: #ffffff; 
+    padding: 0 10px;
+    height: max-content;
     overflow-x: hidden;
 }
 
-.youtube_trailer {
-    width: 560px; /* you have to have a size or this method doesn't work */
-    height: 315px; /* think about making these max-width instead - might give you some more responsiveness */
+a:link {
+    color: cornflowerblue;
+}
 
-    position: absolute; /* positions out of the flow, but according to the nearest parent */
-    top: -40%; right: -35%; /* confuse it i guess */ 
-    bottom: 0; left: 0;
-    margin: auto; /* make em equal */
+a:visited {
+    color: cornflowerblue;
+}
+
+h1,h2,h3 {
+    line-height: 1.2;
+}
+
+.footer {
+    text-align: center;
+    max-width: clamp(0px, 80vw ,1000px);
+}
+
+.contact{
     display: flex;
+    justify-content: space-evenly;
 }
 
-.youtube_trailer:hover {
-    width: 588px; /* you have to have a size or this method doesn't work */
-    height: 330px; /* think about making these max-width instead - might give you some more responsiveness */
-}
-
-a{
-    text-decoration: none;
-    color: #ffffff;
-    transition: 1s;
-}
-
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.266);
-    backdrop-filter: blur(5px);
-    height: 7vh;
-    width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+.tabs{
     display: flex;
-    align-items: center;
-    z-index: 10;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-self: flex-start;
+    flex: auto;
 }
 
-.projectsbutton{
-    position: absolute;
-    margin-top: 1%;
-    margin-left: 5%;
+.tab{
+    width: 130px;
 }
 
-.homebutton{
-    position: fixed;
-    margin-top: -24%;
-    margin-left: 5%;
+.disabled{
+    color: rgb(57, 57, 57);
 }
 
-.links{
-    align-content: center;
-    display: flex;
-    justify-content: center;
-    transition: 0.2s;
-}
-
-.navlink{
-    font-size: 25px;
-}
-
-.linkhover:hover{
-    color: #404040;
-}
-
-.bg-video {
-    overflow-x: hidden;
-    position: absolute;
-    display: inline;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-size: cover;
-    background: no-repeat center;
-    user-select: none;
-    pointer-events: none;
-  
-    filter: brightness(60%);
-
-    /*additional tweaks for positioning, read more in the link above*/
-    height: auto;
-    width: 100vw;
-    /*height: 100%;*/
-    /*width: 177.77777778vh; /* 100 * 16 / 9 */
-    /*min-width: 100%;
-    /*min-height: 56.25vw; /* 100 * 9 / 16 */
-  }
-
-  @media (max-width: 1279px)
-  {
-    .bg-video {
-        height: 100vh;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: auto;
-    }
-
-    .navbar{
-        height: 15vh;
-    }
-  }
-
-.siteHeader_title{
-    font-size: 70px;
-}
-
-.siteHeader_image{
-    margin-top: 25%;
-    margin-left: 10%;
-    margin-bottom: 0%;
-    place-items: center;
-    align-content: center;
-    width: 30%;
-    height: auto;
-    transition: all 1s;
-}
-
-.siteHeader_image:hover{
-    width: 40%;
-    height: auto;
-}
-
-.siteHeader_title:hover{
+.disabled:hover{
     transform: scale(1.2);
+    transition: all 50ms;
 }
 
-.siteHeader_lable{
-    font-size: 20px;
-    font-weight: 100;
-    color: #ffffff;
+.hidden{
+    display: none;
 }
 
-.siteShowcase{
-    margin-top: 25%;
-    margin-left: 50%;
-    margin-bottom: 0%;
-    place-items: center;
-    align-content: center;
-    font-size: 20px;
+.disabled:hover{
+    color: rgb(57, 57, 57);
 }
 
-.header{
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
+.subtitle {
+    color: rgb(186, 186, 186);
 }
 
-.hidden_left{
-    opacity: 0;
-    filter: blur(10px);
-    transform: translateX(-100%);
-    transition: all 1s;
+/*Stickers*/
+.stickers{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: -100;
+    width: 1920;
+    height: 1080;
 }
 
-.hidden_right{
-    opacity: 0;
-    filter: blur(10px);
-    transform: translateX(100%);
-    transition: all 1s;
+.dinoSticker{
+    transform: scale(0.2) rotate(-20deg) translate(-200px, 900px);
 }
-
-.hidden_top{
-    opacity: 0;
-    filter: blur(10px);
-    transform: translateY(-100%);
-    transition: all 1s;
-}
-
-.hidden_bottom{
-    opacity: 0;
-    filter: blur(10px);
-    transform: translateY(100%);
-    transition: all 1s;
-}
-
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
-/*@media (min-width: 1920px)
-{
-    #bg{
-        background-position-x: 45%;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        overflow-x: hidden;
-    }
-}
-
-@media (max-width: 1919px) {
-    #bg{
-        background-position-x: 45%;
-        background-repeat: no-repeat;
-        background-size: 1920 auto;
-        overflow-x: hidden;
-    }
-}
-
-@media (max-width: 1500px)
-{
-    .siteHeader_image{
-        width: 60%;
-    }
-
-    .siteHeader_image:hover{
-        width: 65%;
-    }
-
-    .siteHeader_lable{
-        font-size: 40px;
-        max-width: 70%;
-    }
-}
-
-@media (max-width: 1000px)
-{
-    .siteHeader_image{
-        margin-top: 200px;
-        width: 80%;
-    }
-
-    .siteHeader_image:hover{
-        width: 85%;
-    }
-
-    .siteHeader_lable{
-        font-size: 25px;
-        max-width: 85%;
-    }
-
-
-}*/
