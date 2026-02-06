@@ -48,7 +48,7 @@ h1,h2,h3 {
 .footer {
     text-align: center;
     align-items: center;
-    max-width: clamp(0px, 80vw ,1500px);
+    max-width: auto;
 }
 
 .contact{
@@ -59,6 +59,13 @@ h1,h2,h3 {
     align-self: flex-start;
     flex: auto;
 }
+
+@media (orientation: landscape){
+    .contactLink{
+        width: 180px;
+    }
+}
+
 
 .tabs{
     display: flex;
