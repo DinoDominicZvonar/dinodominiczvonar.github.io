@@ -22,74 +22,53 @@
     <title>Dino Zvonar</title>
     <style type="text/css">
     </style>
+
     </head>
 
-    <div class="stickers hidden">
-        <img class="sticker dinoSticker" src="Resources/Images/PICT0001.jpg">
-    </div>
-
     <body>
-
         <header style="text-align: center;">
 
             <script>
                 fetch('navbar.html')
                 .then(response => response.text())
                 .then(data => {
-                const nav = document.getElementById('navbar');
+                const nav = document.getElementById('nav');
                 
                 const fragment = document.createRange().createContextualFragment(data);
                 nav.appendChild(fragment);
+
+                const homeTab = document.getElementById("HOME");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }
+
                 });
             </script>
-            <div id="navbar"></div>
+            
+            <div id="nav"></div>
             
         </header>
+        
+        <div class="main-content">
 
+            <h3>Under Construction...</h3>
+        
+        <script>
+                fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                const nav = document.getElementById('foot');
+                
+                const fragment = document.createRange().createContextualFragment(data);
+                nav.appendChild(fragment);
 
-    <div style="height: 100px;"></div>
-    <div class="aboutme tabcontent">
-        <p>Hi! I'm Dino, a 22 year old Software Engineer / Game Programmer.
-           I'm currently working at <a href="https://www.handelsbanken.se/">Handelsbanken</a> 
-           as a COBOL Developer as a part of the Cross Border Payments team, I've previously 
-           worked at <a href="https://www.dice.se">DICE</a> where I worked on
-           <a href="https://www.ea.com/games/battlefield/battlefield-6">Battlefield 6</a>
-           first as a Software Engineer Intern on the Core Systems team and then as a 
-           Software Engineer on the KeepGreen team. 
-           <a href="https://www.mobygames.com/person/1897176/dino-zvonar/">proof</a> :)
-        </p>
+                });
+        </script>
 
-        <p>My interest in game development started around the age of seven when I realized
-           that the names of the people in the games that I was playing made games for a living.
-           I've studied at The Game Assembly in Malmö where I gained valuable experience in teamwork
-           and game creation. The Game Assembly is also where I built up a strong background in C++,
-           ImGui, Scripting, AI and DirectX11.
-        </p>
+        <div id="foot"></div>
 
-        <p>I'm a real horror and scifi nut. My favorite games include Until Dawn, The Last Of Us and Resident Evil 7.
-           When I'm not playing games you might find me taking long walks, playing boardgames with friends or 
-           watching the latest movies at the cinemas.
-        </p>
     </div>
-    <div class="games tabcontent hidden">
-        <p style="text-align: center;">Under Construction</p>
-    </div>
-    <div class="blog tabcontent hidden">
-        <p style="text-align: center;">Under Construction</p>
-    </div>
-    <div style="height: 100px;"></div>
-    <div class="footer">
-        <H3>CONTACT ME</H3>
-        <div class="contact">
-            <p class="contactLink"><a href="mailto:dino.zvonar@hotmail.com">dino.zvonar@hotmail.com</a></p>
-            <!-- <p><a href="https://www.linkedin.com/in/dinozvonar/">Linkedin</a></p> --> 
-            <p class="contactLink"><a href="Resources/Dino Zvonar Resume.pdf">CV</a></p>
-            <p class="contactLink"><a href="tel:+46704295636">(+46) 70-429-56-36</a></p>
-        </div>
-        <p>© 2026 Dino Dominic Zvonar.</p>
-        <p>All Rights Reserved</p>
-        <p>Note: This website is still under construction</p>
-    </div>
+
     </body>
 
 

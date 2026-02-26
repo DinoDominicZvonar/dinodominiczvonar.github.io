@@ -1,0 +1,89 @@
+.GamesGrid {
+    display: grid;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (orientation: portrait)
+{
+    .GamesGrid{
+        grid-template-columns: auto;
+        align-content: center;
+        row-gap: 5vh;
+    }
+
+    .GameCard {
+        width: 80vw;
+        height: 90vw;
+    }
+
+    .GameCard img{
+        max-height: 90vw;
+    }   
+}
+
+@media (min-width: 900px)
+{
+    .GamesGrid{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (orientation: landscape)
+{
+    .GamesGrid{
+        grid-template-columns: auto auto auto;
+        align-content: center;
+        row-gap: 40px;
+    }
+
+    .GameCard {
+        width: 400px;
+        height: 450px;
+    }
+
+    .GameCard img{
+        max-height: 450px;
+    }   
+}
+
+.GameCard:hover{
+    transform: scale(1.1);
+    transition: all 100ms;
+    cursor: pointer;
+}
+
+.GameCard:hover img{
+    opacity: 0.2;
+    transition: all 100ms;
+}
+
+.GameCard:hover p {
+    opacity: 100%;
+    transition: all 100ms;
+}
+
+.GameCard {
+    transition: all 100ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.GameCard img{
+    width: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.GameCard p {
+    transition: all 100ms;
+    opacity: 0%;
+    position: absolute;
+    color: #000000;
+}

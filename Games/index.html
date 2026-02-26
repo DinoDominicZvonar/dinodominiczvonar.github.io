@@ -1,0 +1,101 @@
+<html>
+    <head>
+    <script type="text/javascript" src="../code.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+    <meta charset="utf-8">
+    <meta name="Dino Zvonar">
+    <title>Dino Zvonar</title>
+    <style type="text/css">
+    </style>
+
+    </head>
+
+    <body>
+        <header style="text-align: center;">
+
+            <script>
+                fetch('../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                const nav = document.getElementById('nav');
+                
+                const fragment = document.createRange().createContextualFragment(data);
+                nav.appendChild(fragment);
+
+                const homeTab = document.getElementById("GAMES");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }
+
+                });
+            </script>
+            
+            <div id="nav"></div>
+            
+        </header>
+        
+        <div class="main-content">
+            <h3>TGA Games</h3>
+            <div class="GamesGrid">
+
+                <div class="GameCard">
+                    <img src="../Resources/Images/Little Sinner Banner.png" style="margin-left: 50px;" alt="Little Sinner">
+                    <p>Little Sinner<br>2023</p>
+                </div>
+
+                <div class="GameCard">
+                    <img src="../Resources/Images/Fools Gold Banner.png" style="margin-left: 50px;" alt="Fools Gold">
+                    <p>Fools Gold<br>2023</p>
+                </div>
+
+                <div class="GameCard">
+                    <img src="../Resources/Images/No Rats Harmed Banner.png" style="margin-left: 260px;" alt="No Rats Were Harmed During The Making Of This Game">
+                    <p>No Rats Harmed<br>2023</p>
+                </div>
+
+
+                <div class="GameCard">
+                    <img src="../Resources/Images/Spacetrip Banner.png" style="margin-left: 100px;" alt="Space Trip">
+                    <p>Space Trip<br>2023</p>
+                </div>
+
+
+            </div>
+        
+        <script>
+                fetch('../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                const nav = document.getElementById('foot');
+                
+                const fragment = document.createRange().createContextualFragment(data);
+                nav.appendChild(fragment);
+
+                });
+        </script>
+
+        <div id="foot"></div>
+
+    </div>
+
+    </body>
+
+
+    
+</html>
