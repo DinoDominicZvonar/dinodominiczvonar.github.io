@@ -23,17 +23,24 @@
     }   
 }
 
-@media (min-width: 900px)
+@media (orientation: landscape) and (min-width: 1501px)
 {
     .GamesGrid{
-        grid-template-columns: auto auto;
+                grid-template-columns: auto auto auto;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1500px)
+{
+    .GamesGrid{
+                grid-template-columns: auto auto;
     }
 }
 
 @media (orientation: landscape)
 {
     .GamesGrid{
-        grid-template-columns: auto auto auto;
+
         align-content: center;
         row-gap: 40px;
     }
