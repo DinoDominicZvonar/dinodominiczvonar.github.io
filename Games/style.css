@@ -98,16 +98,28 @@
 
 .GameCard .Title{
     position: absolute;
-    width: 170px;
+    width: 90%;
+    height: auto;
     bottom: 10px;
     left: 10px;
     text-align: left;
-    padding: 0px 10px;
     padding-left: 10px;
     border-radius: 10px;
     background-color: #202020;
-    line-height: 1.1;
+    line-height: 1.5;
+    overflow: hidden;
 }
+
+.GameCard:hover .Title .GameInfo{
+    visibility: visible;
+    position: static;
+}
+
+.GameCard .Title .GameInfo{
+    visibility: hidden;
+    position: fixed;
+}
+
 
 /*.GameCard .Title p{
     margin: 0;
