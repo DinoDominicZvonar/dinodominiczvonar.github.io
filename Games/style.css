@@ -62,7 +62,7 @@
 }
 
 .GameCard:hover img{
-    opacity: 0.2;
+    /*opacity: 0.2;*/
     transition: all 100ms;
 }
 
@@ -73,13 +73,14 @@
 
 .GameCard {
     transition: all 100ms;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
     overflow: hidden;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     border-radius: 10px;
     text-align: center;
+    position: relative;
 }
 
 .GameCard img{
@@ -88,9 +89,29 @@
     flex-shrink: 0;
 }
 
-.GameCard p {
+/*.GameCard p {
     transition: all 100ms;
-    opacity: 0%;
+    opacity: 100%;
     position: absolute;
     color: #000000;
+}*/
+
+.GameCard .Title{
+    position: absolute;
+    width: 170px;
+    bottom: 10px;
+    left: 10px;
+    text-align: left;
+    padding: 0px 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: #202020;
+    line-height: 1.1;
 }
+
+/*.GameCard .Title p{
+    margin: 0;
+    transition: all 100ms;
+    opacity: 100%;
+    color: #ffffff;
+}*/
