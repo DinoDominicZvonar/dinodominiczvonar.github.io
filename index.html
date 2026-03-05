@@ -1,9 +1,9 @@
 <html>
     <head>
-    <script type="text/javascript" src="code.js"></script>
+    <script type="text/javascript" src="code.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="style.css" type="text/css">
 
     <meta charset="utf-8">
@@ -17,16 +17,15 @@
     <body>
         <header style="text-align: center;">
 
+            <div id="nav"></div>
+
             <script>
-                fetch('navbar.html')
+                fetch('../navbar.html')
                 .then(response => response.text())
                 .then(data => {
-                const nav = document.getElementById('nav');
+                document.getElementById('nav').innerHTML = data;
                 
-                const fragment = document.createRange().createContextualFragment(data);
-                nav.appendChild(fragment);
-
-                const homeTab = document.getElementById("HOME");
+                const homeTab = document.getElementById("GAMES");
                 if (homeTab) {
                     homeTab.classList.remove("disabled");
                 }
@@ -34,28 +33,22 @@
                 });
             </script>
             
-            <div id="nav"></div>
-            
         </header>
         
         <div class="main-content">
 
             <h3>Under Construction</h3>
             <p>Hello! This website is still under construction, I'm switching from using Squarespace to rewriting my website from scratch</p>
-        
+            
+        <div id="foot"></div>
+
         <script>
                 fetch('footer.html')
                 .then(response => response.text())
                 .then(data => {
-                const nav = document.getElementById('foot');
-                
-                const fragment = document.createRange().createContextualFragment(data);
-                nav.appendChild(fragment);
-
+                document.getElementById('foot').innerHTML = data;
                 });
         </script>
-
-        <div id="foot"></div>
 
     </div>
 

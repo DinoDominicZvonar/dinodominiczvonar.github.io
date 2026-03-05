@@ -1,21 +1,10 @@
 <html>
     <head>
-    <script type="text/javascript" src="code.js"></script>
+    <script type="text/javascript" src="code.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="style.css" type="text/css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
 
     <meta charset="utf-8">
     <meta name="Dino Zvonar">
@@ -28,19 +17,21 @@
     <body>
         <header style="text-align: center;">
 
+            <div id="nav"></div>
+
             <script>
-                fetch('navbar.html')
+                fetch('../navbar.html')
                 .then(response => response.text())
                 .then(data => {
-                const nav = document.getElementById('nav');
+                document.getElementById('nav').innerHTML = data;
                 
-                const fragment = document.createRange().createContextualFragment(data);
-                nav.appendChild(fragment);
+                const homeTab = document.getElementById("GAMES");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }
 
                 });
             </script>
-            
-            <div id="nav"></div>
             
         </header>
         
@@ -48,20 +39,17 @@
             <div style="height: 20vh;"></div>
             <h3>404<br>Page not Found</h3>
             <div style="height: 20vh;"></div>
-        
+
+
+        <div id="foot"></div>
+
         <script>
                 fetch('footer.html')
                 .then(response => response.text())
                 .then(data => {
-                const nav = document.getElementById('foot');
-                
-                const fragment = document.createRange().createContextualFragment(data);
-                nav.appendChild(fragment);
-
+                document.getElementById('foot').innerHTML = data;
                 });
         </script>
-
-        <div id="foot"></div>
 
     </div>
 
