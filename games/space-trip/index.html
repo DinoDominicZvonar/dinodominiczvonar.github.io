@@ -1,0 +1,129 @@
+<html>
+    <head>
+    <script type="text/javascript" src="../../code.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="../GamePage.css" type="text/css">
+
+    <meta charset="utf-8">
+    <meta name="Dino Zvonar">
+    <title>Dino Zvonar</title>
+    <style type="text/css">
+    </style>
+
+    </head>
+
+    <body>
+        <header style="text-align: center;">
+
+            <div id="nav"></div>
+
+            <script>
+                fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('nav').innerHTML = data;
+                
+                /*const homeTab = document.getElementById("ABOUT");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }*/
+
+                });
+            </script>
+            
+        </header>
+        
+        <div class="main-content">
+            <div style="height: 100px;"></div>
+        <div class="GameContent">
+            <h1>Space Trip</h1>
+                <p>
+                    “Save an astronaut from losing their oxygen while experiencing a psychedelic trip through mind and space.”
+                </p>
+
+                <div class="Trailer">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/DmrDakzZUWM?si=Y6xTFG8tjJfynNE5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <p> This was the first project I got to work on at The Game Assembly. 
+                    Space Trip was made over the span of six weeks going from a concept to a fully fledged game using the Unity game engine.
+                    <br>
+                    <br>
+                    We wanted to combine the Teensie Highways of Rayman 3 with the gameplay loop of Race The Sun to create a trippy experience through space.
+                </p>
+
+                <br><br> <!--Some Breathing Room-->
+
+                <h2>My Contributions</h2>
+                <ul>
+                    <li>Implementation of player animations using the Unity Blendtree</li>
+                    <br>
+                    <li>Checkpoints and respawning of Player and Pickups</li>
+                    <br>
+                    <li>Speed pickups</li>
+                    <br>
+                    <li>Seamless level transitions using blendshapes and asynchronous level loading.</li>
+                </ul>
+                <br>
+                <br>
+                <h2>Seamless Transitions</h2>
+                <div class="MultiDiv">
+                    <div>
+                        <p> 
+                            The most fun and interesting feature I got to implement was the seamless transitions between the levels.
+                        <br>
+                        <br>
+                            While implementing the transitions I encountered two big problems. How could we pull off a black hole that expands from a small point and then tears open from the middle and how do I ensure that the levels load fast enough without any lagspikes?
+                        <br>
+                        <br>
+                            Making the black hole expand and tear open wasn’t as hard as it seemed. After discussing it with graphical artist <a href="https://www.artstation.com/deadcerise">Alexander Ekengren</a>  we came to the conclusion 
+                            that we should use blendshapes in order to manipulate and warp the 3D model to our liking, with the help of the Unity documentation I was able to easily change 
+                            the blending value of the blendshapes based on it’s distance from the player. This combined with some code to rotate the black hole resulted in the effect of a 
+                            massive black hole that appears and expands right in front of your eyes.
+                        <br>
+                        <br>
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../../Resources/Images/Spacetrip/SpaceTrip-Transition.gif" loading="lazy" decoding="async" alt="Spite: The Summoning">
+                    </div>
+                </div>
+                <div class="MultiDiv">
+                    <div>
+                        <img src="../../Resources/Images/Spacetrip/SpaceTripBlackHoleShowcase.gif" loading="lazy" decoding="async" alt="Spite: The Summoning">
+                    </div>
+                    <div>
+                            In order to ensure that the player still animated correctly while loading between levels I had to load the levels asynchronously. 
+                            The problem we encountered was that when changing between levels the game lagged as we had to load in the music. 
+                            This resulted in me having to brainstorm with programmer <a href="https://www.davidnilsson.se/">David Nilsson</a> to get his stem based music system to work with my level transitions, 
+                            this resulted in us settling on implementing a loading screen at the beginning of the game in order to pre-load all the music at the start of 
+                            the game meaning that we didn’t have to load any of it during gameplay.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+        </div>
+
+        <div id="foot"></div>
+
+        <script>
+                fetch('../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('foot').innerHTML = data;
+                });
+        </script>
+
+    </div>
+
+    </body>
+
+
+    
+</html>

@@ -1,0 +1,98 @@
+<html>
+    <head>
+    <script type="text/javascript" src="../../code.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="../GamePage.css" type="text/css">
+
+    <meta charset="utf-8">
+    <meta name="Dino Zvonar">
+    <title>Dino Zvonar</title>
+    <style type="text/css">
+    </style>
+
+    </head>
+
+    <body>
+        <header style="text-align: center;">
+
+            <div id="nav"></div>
+
+            <script>
+                fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('nav').innerHTML = data;
+                
+                /*const homeTab = document.getElementById("ABOUT");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }*/
+
+                });
+            </script>
+            
+        </header>
+        
+        <div class="main-content">
+            <div style="height: 100px;"></div>
+        <div class="GameContent">
+            <h1>No Rats Harmed</h1>
+                <p>
+                    “Use the power of LASERS, 
+                    MIND-CONTROL and HAMSTER WHEELS to get your lab-rats through a series of deadly mazes featuring a plethora of gruesome traps, all in the name of SCIENCE!“
+                </p>
+
+                <div class="Trailer">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/yWDBzlxeS3E?si=ids3hWekRlR7-1rX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <p> The second project we got to work on at The Game Assembly was supposed to be a mobile game. 
+                    No Rats Were Harmed In The Making Of This Game or No Rats Harmed (Shortened) was made over the span of six weeks using the Unity game engine.
+                    <br>
+                    <br>
+                    We took inspiration from Lara Croft GO! to create a puzzle game where you play as a plethora of lab rats trying to get through a series of lab tests.
+                </p>
+                <br><br> <!--Some Breathing Room-->
+
+                <h2>My Contributions</h2>
+                <ul>
+                    <li>Implementation of a player movement reactive postmaster system for traps and AI</li>
+                    <br>
+                    <li>Screen swipe input registration</li>
+                    <br>
+                    <li>Hunter robot AI</li>
+                    <br>
+                    <li>Cutscenes</li>
+                    <br>
+                    <li>Mouse Trap Hammer logic</li>
+                    <br>
+                    <li>Movable platform logic</li>
+                    <br>
+                    <li>Hamster wheel logic and animations</li>
+                    <br>
+                    <li>Main menu implementation including background paralax effect</li>
+                    <br>
+                    <li>Trailer</li>
+                </ul>
+                
+        <div id="foot"></div>
+
+        <script>
+                fetch('../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('foot').innerHTML = data;
+                });
+        </script>
+
+    </div>
+
+    </body>
+
+
+    
+</html>

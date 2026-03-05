@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <script type="text/javascript" src="../../code.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="../GamePage.css" type="text/css">
+
+    <meta charset="utf-8">
+    <meta name="Dino Zvonar">
+    <title>Dino Zvonar</title>
+    <style type="text/css">
+    </style>
+
+    </head>
+
+    <body>
+        <header style="text-align: center;">
+
+            <div id="nav"></div>
+
+            <script>
+                fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('nav').innerHTML = data;
+                
+                /*const homeTab = document.getElementById("ABOUT");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }*/
+
+                });
+            </script>
+            
+        </header>
+        
+        <div class="main-content">
+            <div style="height: 100px;"></div>
+        <div class="GameContent">
+            <h1>Atlantean Ascent</h1>
+                <p>
+                    “You're a Fisherman trapped in an underwater metropolis. Harpoon through the fish monsters and get to the surface.”
+                </p>
+
+                <div class="Trailer">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/R3SimNvIqgI?si=qGbWwP2ndRLcBKm1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <p> Our seventh project at The Game Assembly is a third person shooter. Atlantean Ascent was developed over the span of 14 weeks in our custom engine 
+                    called Aurora.
+                    <br>
+                    <br>
+                    Atlantean Ascent was inspired by <a href="https://store.steampowered.com/app/1282100/REMNANT_II/">Remnant 2</a> and <a href="https://store.steampowered.com/app/384490/NECROPOLIS_BRUTAL_EDITION/">Necropolis</a>.
+                </p>
+
+                <br><br> <!--Some Breathing Room-->
+
+                <h2>My Contributions</h2>
+                <ul>
+                    <li>Asset Manager Rewrite to use individual meta files instead of a single meta bank file</li>
+                    <br>
+                    <li>2D Animation blendspaces</li>
+                    <br>
+                    <li>Animation Layering</li>
+                    <br>
+                    <li>Animation blending between 2D blendspaces and normal animations</li>
+                    <br>
+                    <li>Material Editor</li>
+                    <br>
+                    <li>Viewport Redesign</li>
+                    <br>
+                    <li>Mutiselect ImGuizmo support for translation, rotation and scaling.</li>
+                    <br>
+                    <li>Editor Bugfixes</li>
+                    <br>
+                    <li>Internal engine scene saving updates</li>
+                    <br>
+                    <li>FMOD Surround Sound implementation</li>
+                    <br>
+                    <li>Trailer</li>
+                </ul>
+                
+        <div id="foot"></div>
+
+        <script>
+                fetch('../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('foot').innerHTML = data;
+                });
+        </script>
+
+    </div>
+
+    </body>
+
+
+    
+</html>
