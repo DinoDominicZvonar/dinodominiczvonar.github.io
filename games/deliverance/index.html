@@ -1,0 +1,141 @@
+<html>
+    <head>
+    <script type="text/javascript" src="../../code.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="../GamePage.css" type="text/css">
+
+    <meta charset="utf-8">
+    <meta name="Dino Zvonar">
+    <title>Dino Zvonar</title>
+    <style type="text/css">
+    </style>
+
+    </head>
+
+    <body>
+        <header style="text-align: center;">
+
+            <div id="nav"></div>
+
+            <script>
+                fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('nav').innerHTML = data;
+                
+                /*const homeTab = document.getElementById("ABOUT");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }*/
+
+                });
+            </script>
+            
+        </header>
+        
+        <div class="main-content">
+            <div style="height: 100px;"></div>
+        <div class="GameContent">
+            <h1>Deliverance</h1>
+                <p>
+                    “Solve the puzzles around you and escape the room with the secret formula”
+                </p>
+
+                <div class="Trailer">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/yMVwWUSYU2s?si=wBNnfelWBBDNV2Yg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <p> Our fifth project at The Game Assembly was a small puzzle game. 
+                    Deliverance was made over the span of 4 weeks in our own custom game engine that we decided to call Aurora.
+                    <br>
+                    <br>
+                    Deliverance was inspired heavily by the puzzle game called The Room. 
+                    Deliverance was one of our most intense projects, we had to develop the game and a custom game engine from scratch in the span of just 4 weeks.
+                </p>
+
+                <br><br> <!--Some Breathing Room-->
+
+                <h2>My Contributions</h2>
+                <ul>
+                    <li>Implementation of GameObject and Component system</li>
+                    <br>
+                    <li>Loading of Unreal Engine scenes into our own engine</li>
+                    <br>
+                    <li>Animation system</li>
+                    <br>
+                    <li>FMOD implementation</li>
+                    <br>
+                    <li>Menu System</li>
+                    <br>
+                    <li>Pause Menu</li>
+                    <br>
+                    <li>Splash Screen</li>
+                    <br>
+                    <li>Trailer</li>
+                </ul>
+                <br>
+                <br>
+                <h2>Level Loading</h2>
+                <div class="MultiDiv">
+                    <div>
+                        <p> 
+                            Since we were making a game engine from scratch we didn’t have any easy way to create, 
+                            save and load levels. 
+                            And with this project only being four weeks long we didn’t really have the time to develop a level editor for our game, 
+                            this meant that our level designers ended up designing their levels in Unreal Engine and then exporting the levels as .json files.
+                        <br>
+                        <br>
+                            I took on the responsibility to load these .json files into our game and make them work with our engine.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../../Resources/Images/Deliverance/Level+Loading.gif" loading="lazy" decoding="async" alt="Spite: The Summoning">
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <h2>Animator Component</h2>
+                <div class="MultiDiv">
+                    <div>
+                        <img src="../../Resources/Images/Deliverance/Animated+Meshes.gif" loading="lazy" decoding="async" alt="Spite: The Summoning">
+                    </div>
+                    <div>
+                        <p> 
+                            After getting the levels to load i sat down and created a Animator Component. 
+                            I built upon the skinned mesh rendering system written by Isak Morand-Homqvist and David Nilsson, 
+                            I refactored their system to work with my GameObject and Component system. 
+                        <br>
+                        <br>
+                            I then collaborated with our level designers to get the models to correctly load. 
+                            We pulled it off by having strings like “cup” and “blackboard” as properties in Unreal Engine, 
+                            I could then try to find these properties and load in the corresponding meshes and animations.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+        </div>
+
+        <div id="foot"></div>
+
+        <script>
+                fetch('../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('foot').innerHTML = data;
+                });
+        </script>
+
+    </div>
+
+    </body>
+
+
+    
+</html>

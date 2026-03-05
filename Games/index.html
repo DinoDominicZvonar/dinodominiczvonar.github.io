@@ -50,7 +50,7 @@
 
                 </div>-->
 
-                <div class="GameCard">
+                <div onclick="" class="GameCard" id="heronin">
                     <img src="../Resources/Images/Heronin.webp" loading="lazy" decoding="async" style="margin-left: -200px;" alt="Heronin">
 
                     <div class="Title">
@@ -167,6 +167,12 @@
                         <p class="GameInfo"><b>Platforms: </b> PC<br><b>Engine:</b> Unity<br>LBS Kreativa Gymnasiet</p>
                     </div>
                 </div>
+
+                <script>
+                    document.querySelectorAll(".gamecard").forEach(card => {
+                    card.addEventListener("click", function() { window.location.href = "https://dinozvonar.com/Games/" + this.id; });
+                    });
+                </script>
 
 
             </div>

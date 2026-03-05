@@ -1,0 +1,47 @@
+.Trailer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.MultiDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+@media (orientation: landscape){
+    .MultiDiv div{
+        width: 49%;
+        overflow: hidden;
+        flex: 0 0 auto;
+    }
+}
+
+@media (orientation: portrait){
+    .MultiDiv div{
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.MultiDiv div img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}

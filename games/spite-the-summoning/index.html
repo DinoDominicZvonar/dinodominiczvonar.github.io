@@ -1,0 +1,139 @@
+<html>
+    <head>
+    <script type="text/javascript" src="../../code.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="../GamePage.css" type="text/css">
+
+    <meta charset="utf-8">
+    <meta name="Dino Zvonar">
+    <title>Dino Zvonar</title>
+    <style type="text/css">
+    </style>
+
+    </head>
+
+    <body>
+        <header style="text-align: center;">
+
+            <div id="nav"></div>
+
+            <script>
+                fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('nav').innerHTML = data;
+                
+                /*const homeTab = document.getElementById("ABOUT");
+                if (homeTab) {
+                    homeTab.classList.remove("disabled");
+                }*/
+
+                });
+            </script>
+            
+        </header>
+        
+        <div class="main-content">
+            <div style="height: 100px;"></div>
+        <div class="GameContent">
+            <h1>Spite: The Summoning</h1>
+                <p>“A powerful demonic presence has been summoned in the catacombs of an old town. 
+                    You, the cleric, must decent deeper to the source of the evil and use your divine magic to vanquish the demons that have emerged”
+
+                </p>
+
+                <div class="Trailer">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/3AxDfj9ALJw?si" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <p> Our sixth project at The Game Assembly was probably the biggest one yet. 
+                    We got to stay in the same group we had been assigned to at the start of the fifth project and keep on developing our game engines.
+                    <br>
+                    <br>
+                    With our sixth project we got tasked to create a clone of Diablo, 
+                    when discussing the scope of Diablo my group got to the conclusion that we would need a Editor to help us debug the project.
+                    The development of the editor became my main task throughout the development of Spite: The Summoning.
+                </p>
+
+                <br><br> <!--Some Breathing Room-->
+
+                <h2>My Contributions</h2>
+                <ul>
+                    <li>New asset system and manager utilizing UUID’s</li>
+                    <br>
+                    <li>Object picking and Viewport</li>
+                    <br>
+                    <li>ImGuizmo implementation</li>
+                    <br>
+                    <li>Game object inspector</li>
+                    <br>
+                    <li>Game object hierarchy</li>
+                    <br>
+                    <li>Asset browser</li>
+                    <br>
+                    <li>Engine settings</li>
+                    <br>
+                    <li>Level Loading form unreal Engine</li>
+                    <br>
+                    <li>Animation System rewrite</li>
+                    <br>
+                    <li>Navmesh loading and visualisation</li>
+                    <br>
+                    <li>Pathfinding</li>
+                    <br>
+                    <li>Internal engine scene saving and loading</li>
+                    <br>
+                    <li>Splash screen</li>
+                    <br>
+                    <li>Multi select</li>
+                    <br>
+                    <li>Undo and redo using a command design pattern</li>
+                    <br>
+                    <li>Trailer</li>
+
+                </ul>
+                <br>
+                <br>
+                <h2>Pathfinding</h2>
+                <div class="MultiDiv">
+                    <div>
+                        <p> One of the most vital parts of making a Diablo clone is getting the pathfinding to work since both the 
+                            player and the enemies utilize it to move around. 
+                        <br>
+                        <br>
+                        The navmeshes we use in the game are first generated in Unreal Engine and then exported as .FBX models that 
+                            I then load and break down into navmeshes. 
+                        <br>
+                        <br>
+                        I used an implementation of the A* algorithm to get the path, once I had a path I used an implementation of 
+                            the Stupid Simple Funnel Algorithm to smooth out the path between the points so that it isn't as jagged as the entity goes from one point to another.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../../Resources/Images/Spite The Summoning/NavagentFunnelingShowcase.gif" loading="lazy" decoding="async" alt="Spite: The Summoning">
+                    </div>
+                </div>
+
+        </div>
+
+        <div id="foot"></div>
+
+        <script>
+                fetch('../../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('foot').innerHTML = data;
+                });
+        </script>
+
+    </div>
+
+    </body>
+
+
+    
+</html>
